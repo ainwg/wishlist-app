@@ -24,5 +24,5 @@ abstract class WishDao {
     abstract suspend fun deleteWish(wishEntity: Wish)
 
     @Query("Select * from `wish-table` where id=:id")
-    abstract fun getAllWishesById(id:Long): Flow<Wish>
+    abstract fun getWishesById(id:Long): Flow<Wish>
 }
